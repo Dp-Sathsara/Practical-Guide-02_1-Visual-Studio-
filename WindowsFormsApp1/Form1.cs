@@ -21,5 +21,24 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            string match1Result = txtMatch1.Text.Trim().ToLower();
+            string match2Result = txtMatch2.Text.Trim().ToLower();
+
+            if (match1Result == "win" && match2Result == "win")
+            {
+                txtTitle.Text = "Champion";
+            }
+            else if (match1Result == "win" || match2Result == "win")
+            {
+                txtTitle.Text = "Attacker";
+            }
+            else
+            {
+                txtTitle.Text = "Sportsman";
+            }
+        }
     }
 }
